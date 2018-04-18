@@ -292,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wonyer.com/article/hello-world.html">
+    <link itemprop="mainEntityOfPage" href="http://wonyer.com/article/MySQL主从复制配置.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ljhn11">
@@ -311,7 +311,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/article/hello-world.html" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/article/MySQL主从复制配置.html" itemprop="url">MySQL主从复制配置</a></h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T00:00:00+08:00">
-                2018-04-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T16:24:33+08:00">
+                2018-04-18
               </time>
             
 
@@ -346,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Other/" itemprop="url" rel="index">
-                    <span itemprop="name">Other</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -385,18 +385,19 @@
       
         
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More info: Server
-Generate static files1$ hexo generate
-More info: Generating
-Deploy to remote sites1$ hexo
+          iml系统构建时，采用MySQL数据库。数据库层面实现主从复制，服务端实现读写分离。主数据库用于数据库写入，从数据库用于数据读取。
+本地环境通过单机多实例进行开发，MySQL通过压缩版本进行安装
+
+MySQL版本：mysql-5.7.21-winx64，官网
+数据库客户端：Navicat Premium，版本：12.0.24(64-bit)，官网
+
+安装配置文件my.ini解压两份MySQL安装包，路径分别为D:\mysql-master、D:\mysql-master。
+新增MySQL配置文件my.ini
+12345678910111213141516171819202122232425[mysql]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 跳过授权，忘记密码时使用#skip-grant-tables# 设置33061端口
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/article/hello-world.html#more" rel="contents">
+            <a class="btn" href="/article/MySQL主从复制配置.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
